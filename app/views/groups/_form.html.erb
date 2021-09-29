@@ -16,18 +16,57 @@
     <%= form.text_field :name, class:"input" %>
   </div>
 
-  <div class="field">
-    <%= form.label :icon, class:"label" %>
-    <%= form.radio_button :icon, 'fab fa-amazon fa-2x' %> <i class="fab fa-amazon fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fab fa-shopify fa-2x' %> <i class="fab fa-shopify fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fas fa-money-bill-alt fa-2x' %> <i class="fas fa-money-bill-alt fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fab fa-500px fa-2x' %> <i class="fab fa-500px fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fas fa-ad fa-2x' %> <i class="fas fa-ad fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fab fa-apple fa-2x' %> <i class="fab fa-apple fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fas fa-atlas fa-2x' %> <i class="fas fa-atlas fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fab fa-bitcoin fa-2x' %> <i class="fab fa-bitcoin fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fas fa-folder-open fa-2x' %> <i class="fas fa-folder-open fa-2x"></i><br>
-    <%= form.radio_button :icon, 'fas fa-briefcase-medical fa-2x' %> <i class="fas fa-briefcase-medical fa-2x"></i><br>
+  <div class="field outer-feild">
+    <span class="mleft"><strong><%= form.label :icon %>(Choose An Icon bellow)</strong></span>
+    <div class="container-div">
+      <div class="columns">
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-amazon fa-2x' %> <i class="fab fa-amazon fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-shopify fa-2x' %> <i class="fab fa-shopify fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-briefcase-medical fa-2x' %> <i class="fas fa-briefcase-medical fa-2x"></i><br>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-money-bill-alt fa-2x' %> <i class="fas fa-money-bill-alt fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-500px fa-2x' %> <i class="fab fa-500px fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-bitcoin fa-2x' %> <i class="fab fa-bitcoin fa-2x"></i><br>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-ad fa-2x' %> <i class="fas fa-ad fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-apple fa-2x' %> <i class="fab fa-apple fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-atlas fa-2x' %> <i class="fas fa-atlas fa-2x"></i><br>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-folder-open fa-2x' %> <i class="fas fa-folder-open fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fab fa-apple fa-2x' %> <i class="fab fa-apple fa-2x"></i><br>
+        </div>
+        <div class="column is-4">
+          <%= form.radio_button :icon, 'fas fa-atlas fa-2x' %> <i class="fas fa-atlas fa-2x"></i><br>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="field">

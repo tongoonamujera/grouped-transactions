@@ -16,6 +16,15 @@
 
 @import "bulma";
 
+.container-div {
+  margin-left: 10%;
+}
+
+.outer-feild {
+  border: 1px solid gray;
+  padding: 5%;
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';
