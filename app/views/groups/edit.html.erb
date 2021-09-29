@@ -1,6 +1,16 @@
-<h1>Editing Group</h1>
 
-<%= render 'form', group: @group %>
 
-<%= link_to 'Show', @group %> |
-<%= link_to 'Back', groups_path %>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="card">
+      <h1 class="has-text-centered"><strong>Editing Group</strong></h1>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', group: @group %>
+
+          <%= link_to 'Show', @group, class:"button is-success" %> |<%= link_to 'Back', groups_path, class:"button is-dark" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
