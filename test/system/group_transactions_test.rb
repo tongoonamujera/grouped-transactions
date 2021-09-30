@@ -15,7 +15,7 @@ class GroupTransactionsTest < ApplicationSystemTestCase
     click_on "New Group Transaction"
 
     fill_in "Group", with: @group_transaction.group_id
-    fill_in "Transaction", with: @group_transaction.transaction_id
+    fill_in "User transaction", with: @group_transaction.user_transaction_id
     click_on "Create Group transaction"
 
     assert_text "Group transaction was successfully created"
@@ -27,7 +27,7 @@ class GroupTransactionsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Group", with: @group_transaction.group_id
-    fill_in "Transaction", with: @group_transaction.transaction_id
+    fill_in "User transaction", with: @group_transaction.user_transaction_id
     click_on "Update Group transaction"
 
     assert_text "Group transaction was successfully updated"

@@ -17,7 +17,7 @@ class GroupTransactionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create group_transaction" do
     assert_difference('GroupTransaction.count') do
-      post group_transactions_url, params: { group_transaction: { group_id: @group_transaction.group_id, transaction_id: @group_transaction.transaction_id } }
+      post group_transactions_url, params: { group_transaction: { group_id: @group_transaction.group_id, user_transaction_id: @group_transaction.user_transaction_id } }
     end
 
     assert_redirected_to group_transaction_url(GroupTransaction.last)
@@ -34,7 +34,7 @@ class GroupTransactionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update group_transaction" do
-    patch group_transaction_url(@group_transaction), params: { group_transaction: { group_id: @group_transaction.group_id, transaction_id: @group_transaction.transaction_id } }
+    patch group_transaction_url(@group_transaction), params: { group_transaction: { group_id: @group_transaction.group_id, user_transaction_id: @group_transaction.user_transaction_id } }
     assert_redirected_to group_transaction_url(@group_transaction)
   end
 

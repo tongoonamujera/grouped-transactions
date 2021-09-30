@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Transaction:</strong>
-  <%= @group_transaction.transaction_id %>
+  <strong>Group:</strong>
+  <%= @group_transaction.group_id %>
 </p>
 
 <p>
-  <strong>Group:</strong>
-  <%= @group_transaction.group_id %>
+  <strong>User transaction:</strong>
+  <%= @group_transaction.user_transaction_id %>
 </p>
 
 <%= link_to 'Edit', edit_group_transaction_path(@group_transaction) %> |

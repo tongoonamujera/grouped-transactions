@@ -64,6 +64,6 @@ class GroupTransactionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def group_transaction_params
-      params.require(:group_transaction).permit(:transaction_id, :group_id)
+      params.require(:group_transaction).permit(:group_id, :user_transaction_id)
     end
 end
