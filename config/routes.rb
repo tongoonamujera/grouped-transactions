@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :group_transactions
   resources :transactions
   resources :groups
   devise_for :users

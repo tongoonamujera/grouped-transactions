@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @transaction.price %>
+  <strong>Name:</strong>
+  <%= @transaction.name %>
 </p>
 
 <p>
-  <strong>Transaction code:</strong>
-  <%= @transaction.transaction_code %>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @transaction.user_id %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @transaction.group_id %>
 </p>
 
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
