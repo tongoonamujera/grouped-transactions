@@ -7,10 +7,16 @@
       <div class="card-content">
         <div class="content">
           <%= render 'form', group: @group %>
-
-          <%= link_to 'Show', @group, class:"button is-success" %> |<%= link_to 'Back', groups_path, class:"button is-dark" %>
         </div>
       </div>
+      <footer class="card-footer">
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Show', @group, class:"card-footer-items button is-success is-fullwidth" %> 
+        </div>
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Back', groups_path, class:"card-footer-items button is-dark is-fullwidth" %>
+        </div>
+      </footer>
     </div>
   </div>
 </div>
