@@ -4,16 +4,31 @@
       <div class="card-content">
         <div class="content">
           <p id="notice"><%= notice %></p>
-
-          <p>
-            <strong>Name:</strong>
-            <%= @group.name %>
-          </p>
-
-          <p>
-            <strong>Icon:</strong>
-            <%= icon(@group.icon) %>
-          </p>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <span>
+                <%= icon(@group.icon) %>
+                <span class="is-size-2">
+                  <%= @group.name.capitalize %>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="ml-5 outer-feild">
+            <h1 class='has-text-centered'>Group transactions</h1>
+            <% @group.user_transactions.each do |transaction| %>
+              <div class="box">
+                <div class="columns">
+                  <div class="column is-6">
+                    <%= transaction.name %>
+                  </div>
+                  <div class="column is-6">
+                    <strong>$</strong> <%=transaction.amount %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
 
 
           <%= link_to 'Edit', edit_group_path(@group) %> |
