@@ -8,6 +8,8 @@ class UserTransactionsController < ApplicationController
 
   # GET /user_transactions/1 or /user_transactions/1.json
   def show
+    @group_transactions = Group.all
+    @group_transaction = GroupTransaction.new
   end
 
   # GET /user_transactions/new
