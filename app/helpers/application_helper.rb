@@ -26,4 +26,9 @@ module ApplicationHelper
     a = Group.find(group.id).user_transactions.pluck(:amount).inject(:+)
     a.nil? ? a = 0 : a
   end
+
+  def user_total_transactions
+    a = current_user.user_transactions.pluck(:amount).inject(:+)
+    a.nil? ? a = 0 : a
+  end
 end

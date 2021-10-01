@@ -8,6 +8,15 @@
 
         <h1 class="has-text-centered">User Transactions</h1>
 
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <u><strong>Total Amount</strong></u>
+          </div>
+          <div class="column is-4 has-text-right">
+            $<%= user_total_transactions %>
+          </div>
+        </div>
+
         <% @user_transactions.each do |user_transaction| %>
           <div class="box">
             <%= link_to user_transaction do %>
