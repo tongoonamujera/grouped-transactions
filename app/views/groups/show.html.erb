@@ -5,7 +5,7 @@
         <div class="content">
           <p id="notice"><%= notice %></p>
           <div class="columns is-centered">
-            <div class="column is-6">
+            <div class="column is-6 has-text-centered">
               <span>
                 <%= icon(@group.icon) %>
                 <span class="is-size-2">
@@ -14,6 +14,20 @@
               </span>
             </div>
           </div>
+
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <span>
+                <strong><u>Group Transactions Total Amount:</u></strong>
+              </span>
+            </div>
+            <div class="column is-3">
+              <span>
+                <u>$<%= group_transactions_total(@group) %></u>
+              </span>
+            </div>
+          </div>
+
           <div class="ml-5 outer-feild">
             <h1 class='has-text-centered'>Group transactions</h1>
             <% @group.user_transactions.each do |transaction| %>
@@ -30,11 +44,16 @@
             <% end %>
           </div>
 
-
-          <%= link_to 'Edit', edit_group_path(@group) %> |
-          <%= link_to 'Back', groups_path %>
         </div>
       </div>
+      <footer class="card-footer">
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Edit', edit_group_path(@group), class:"card-footer-items button is-success is-fullwidth" %>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Back', groups_path, class:"card-footer-items button is-dark is-fullwidth" %>
+        </div>
+      </footer>
     </div>
   </div>
 </div>

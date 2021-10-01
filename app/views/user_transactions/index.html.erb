@@ -12,7 +12,7 @@
           <div class="box">
             <%= link_to user_transaction do %>
               <div class="columns has-text-dark">
-                <div class="column is-6">
+                <div class="column is-4">
                   <span>
                     <%= icon(first_transaction_icon(user_transaction.id))%>
                     <span class="is-size-3">
@@ -20,8 +20,12 @@
                     </span>
                   </span>
                 </div>
-                <div class="column is-6 has-text-right">
-                  <span class="is-size-4"><strong>Amount:</strong> $<%= user_transaction.amount %></span>
+                <div class="column is-4 has-text-centered">
+                  <span class="is-size-4">$<%= user_transaction.amount %></span>
+                </div>
+
+                <div class="column is-4 has-text-right">
+                  <span class="is-size-5"><i><%= user_transaction.created_at.strftime("%d %b %Y") %></i></span>
                 </div>
               </div>
             <% end %>
@@ -29,6 +33,6 @@
         <% end %>
       </div>
     </div>
-    <%= link_to 'New User Transaction', new_user_transaction_path, class:"button is-success mt-3 is-fullwidth" %>
+    <%= link_to 'Add New Transaction', new_user_transaction_path, class:"button is-success mt-3 is-fullwidth" %>
   </div>
 </div>

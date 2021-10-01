@@ -21,4 +21,9 @@ module ApplicationHelper
     a = GroupTransaction.where('group_id =? AND user_transaction_id =?', group.id, transaction.id).pluck(:group_id)
     a.include?(group.id) ? true : false
   end
+
+  def group_transactions_total(group)
+    a = Group.find(group.id).user_transactions.pluck(:amount).inject(:+)
+    a.nil? ? a = 0 : a
+  end
 end
