@@ -33,11 +33,15 @@
             <% @group.user_transactions.each do |transaction| %>
               <div class="box">
                 <div class="columns">
-                  <div class="column is-6">
+                  <div class="column is-4">
                     <%= transaction.name %>
                   </div>
-                  <div class="column is-6">
+                  <div class="column is-3 has-text-centered">
                     <strong>$</strong> <%=transaction.amount %>
+                  </div>
+
+                  <div class="column is-5 has-text-right">
+                    <i><strong>Created by:</strong> <%= transaction.user.username.capitalize %></i>
                   </div>
                 </div>
               </div>

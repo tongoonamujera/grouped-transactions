@@ -3,7 +3,7 @@ class UserTransactionsController < ApplicationController
 
   # GET /user_transactions or /user_transactions.json
   def index
-    @user_transactions = UserTransaction.all
+    @user_transactions = UserTransaction.all.order(created_at: :desc)
   end
 
   # GET /user_transactions/1 or /user_transactions/1.json
