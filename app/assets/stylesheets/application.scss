@@ -37,3 +37,79 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/regular';
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+
+.profile-container{
+  display: block;
+}
+
+.flex-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+
+  background-color: green;
+
+  align-items: center;
+  .user-profile{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links-container {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    line-height: 230%;
+  }
+}
