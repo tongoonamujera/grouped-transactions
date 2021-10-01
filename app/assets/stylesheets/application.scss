@@ -84,7 +84,7 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 
 
 .profile-container{
-  display: block;
+  display: none;
 }
 
 .flex-container {
@@ -107,9 +107,11 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   }
 
   .links-container {
+    color: #ddd !important;
     margin-top: 3%;
     display: flex;
     flex-direction: column;
     line-height: 230%;
   }
 }
+
