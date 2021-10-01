@@ -4,31 +4,20 @@
     <div class="card">
       <div class="card-content">
         <div class="content">
-          <p id="notice"><%= notice %></p>
-
-          <h1 class="has-text-centered">Groups</h1>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Icon</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <% @groups.each do |group| %>
-                <tr>
-                  <td><%= group.name %></td>
-                  <td><%= icon(group.icon)%></td>
-                  <td><%= link_to 'Show', group %></td>
-                  <td><%= link_to 'Edit', edit_group_path(group) %></td>
-                  <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
+            <% @groups.each do |group| %>
+              <div class="box">
+                <%= link_to group do %>
+                  <div class="columns">
+                    <div class="column is-6 has-text-dark">
+                      <%= icon(group.icon)%>
+                    </div>
+                    <div class="column is-6 has-text-dark has-text-centered">
+                      <%= group.name %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
         </div>
       </div>
     </div>
@@ -36,4 +25,3 @@
     <%= link_to 'New Group', new_group_path, class:"button is-success" %>
   </div>
 </div>
-
