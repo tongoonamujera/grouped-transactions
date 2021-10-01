@@ -1,6 +1,23 @@
-<h1>Editing User Transaction</h1>
 
-<%= render 'form', user_transaction: @user_transaction %>
 
-<%= link_to 'Show', @user_transaction %> |
-<%= link_to 'Back', user_transactions_path %>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <h1 class="has-text-centered">Editing Transaction</h1>
+
+          <%= render 'form', user_transaction: @user_transaction %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Show', @user_transaction, class:"card-footer-items button is-success is-fullwidth" %>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Back', user_transactions_path, class:"card-footer-items button is-dark is-fullwidth" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
