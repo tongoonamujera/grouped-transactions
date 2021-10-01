@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bulma";
+
+.container-div {
+  margin-left: 10%;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.outer-feild {
+  border: 1px solid gray;
+  padding: 5%;
+}
+
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+
+.profile-container{
+  display: none;
+}
+
+.flex-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 50vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  font-size: x-large;
+
+  background-color: green;
+
+  align-items: center;
+  .user-profile{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links-container {
+    color: #ddd !important;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    line-height: 230%;
+  }
+}
+

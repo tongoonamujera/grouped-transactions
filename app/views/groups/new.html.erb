@@ -1,0 +1,14 @@
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <div class="card">
+      <h1 class="has-text-centered"><strong>New Group</strong></h1>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', group: @group %>
+
+          <%= link_to 'Back', groups_path, class:"button is-dark mt-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

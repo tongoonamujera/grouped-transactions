@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>User transaction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_transactions.each do |group_transaction| %>
+      <tr>
+        <td><%= group_transaction.group_id %></td>
+        <td><%= group_transaction.user_transaction_id %></td>
+        <td><%= link_to 'Show', group_transaction %></td>
+        <td><%= link_to 'Edit', edit_group_transaction_path(group_transaction) %></td>
+        <td><%= link_to 'Destroy', group_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Transaction', new_group_transaction_path %>

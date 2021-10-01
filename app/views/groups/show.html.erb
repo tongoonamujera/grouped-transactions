@@ -1,0 +1,63 @@
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <p id="notice"><%= notice %></p>
+          <div class="columns is-centered">
+            <div class="column is-6 has-text-centered">
+              <span>
+                <%= icon(@group.icon) %>
+                <span class="is-size-2">
+                  <%= @group.name.capitalize %>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <span>
+                <strong><u>Group Transactions Total Amount:</u></strong>
+              </span>
+            </div>
+            <div class="column is-3">
+              <span>
+                <u>$<%= group_transactions_total(@group) %></u>
+              </span>
+            </div>
+          </div>
+
+          <div class="ml-5 outer-feild">
+            <h1 class='has-text-centered'>Group transactions</h1>
+            <% @group.user_transactions.each do |transaction| %>
+              <div class="box">
+                <div class="columns">
+                  <div class="column is-4">
+                    <%= transaction.name %>
+                  </div>
+                  <div class="column is-3 has-text-centered">
+                    <strong>$</strong> <%=transaction.amount %>
+                  </div>
+
+                  <div class="column is-5 has-text-right">
+                    <i><strong>Created by:</strong> <%= transaction.user.username.capitalize %></i>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Edit', edit_group_path(@group), class:"card-footer-items button is-success is-fullwidth" %>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Back', groups_path, class:"card-footer-items button is-dark is-fullwidth" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

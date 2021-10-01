@@ -1,0 +1,54 @@
+
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <p id="notice"><%= notice %></p>
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <div class="columns">
+            <div class="column">
+              <p>
+                <strong>Name:</strong>
+                <%= @user_transaction.name %>
+              </p>
+            </div>
+            <div class="column">
+              <p>
+                <strong>Amount:</strong>
+                $<%= @user_transaction.amount %>
+              </p>
+            </div>
+          </div>
+
+          <% @group_transactions.each do |group|%>
+            <% unless transaction_already_in_group(group, @user_transaction) %>
+              <div class="box">
+                <div class="columns is-centered">
+                  <div class="column is-4"><%=icon(group.icon) %> </div>
+                  <div class="column is-4"><%= group.name %></div>
+                  <div class="column is-4 has-text-right">
+                    <%= form_for @group_transaction, method: :post do |f| %>
+                      <%= f.text_field :group_id, value: group.id, type: :hidden %>
+                      <%= f.text_field :user_transaction_id, value: @user_transaction.id, type: :hidden %>
+                      <%= f.submit "add to group", class:"button is-success" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="columns mt-3">
+      <div class="column has-text-centered">
+        <%= link_to 'Edit', edit_user_transaction_path(@user_transaction), class:"button is-success" %>
+      </div>
+      <div class="column has-text-centered">
+        <%= link_to 'Back', user_transactions_path, class:"button is-dark" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+            <% @groups.each do |group| %>
+              <div class="box">
+                <%= link_to group do %>
+                  <div class="columns">
+                    <div class="column is-6 has-text-dark">
+                      <%= icon(group.icon)%>
+                    </div>
+                    <div class="column is-6 has-text-dark has-text-centered">
+                      <%= group.name %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <br>
+    <%= link_to 'Create A New Group', new_group_path, class:"button is-success is-fullwidth" %>
+  </div>
+</div>
+
+<%= profile_icon %>
+

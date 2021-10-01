@@ -1,0 +1,22 @@
+
+
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <div class="card">
+      <h1 class="has-text-centered"><strong>Editing Group</strong></h1>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', group: @group %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Show', @group, class:"card-footer-items button is-success is-fullwidth" %> 
+        </div>
+        <div class="column is-6 has-text-centered">
+          <%= link_to 'Back', groups_path, class:"card-footer-items button is-dark is-fullwidth" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
