@@ -13,6 +13,10 @@ module ApplicationHelper
     content_tag(:i, "", class:"far fa-user-circle fa-3x")
   end
 
+  def login_icon
+    content_tag(:i, "", class:"fas fa-sign-in-alt fa-2x")
+  end
+
   def join_group(group, transaction)
     (link_to "add to group", new_group_transaction_path(@group_transaction, group_id: group.id, user_transaction_id:transaction.id), class:"button is-success",method: :post).html_safe
   end
