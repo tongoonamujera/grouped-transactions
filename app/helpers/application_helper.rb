@@ -39,4 +39,11 @@ module ApplicationHelper
     a = current_user.user_transactions.pluck(:amount).inject(:+)
     a.nil? ? a = 0 : a
   end
+
+  def user_total_external_transactions
+    a = current_user.user_transactions.pluck(:id)
+    b = GroupTransaction.where("user_transaction_id IN (?)", a).pluck(:user_transaction_id).uniq!
+    c = current_user.user_transactions.where.not("id IN (?)", b).pluck(:amount).inject(:+)
+    c.nil? ? c = 0 : c
+  end
 end
