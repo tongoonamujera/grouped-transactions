@@ -1,2 +1,47 @@
-<h1>ExternalTransactions#index</h1>
-<p>Find me in app/views/external_transactions/index.html.erb</p>
+
+
+<div class="columns is-centered">
+  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+    <div class="card card-content">
+      <div class="content">
+        <p id="notice"><%= notice %></p>
+
+        <h1 class="has-text-centered">User Transactions</h1>
+
+        <div class="columns is-centered">
+          <div class="column is-4">
+            <u><strong>Total Amount</strong></u>
+          </div>
+          <div class="column is-4 has-text-right">
+            $<%= user_total_transactions %>
+          </div>
+        </div>
+
+        <% @external_transactions.each do |user_transaction| %>
+          <div class="box">
+            <%= link_to user_transaction do %>
+              <div class="columns has-text-dark">
+                <div class="column is-4">
+                  <span>
+                    <%= icon(first_transaction_icon(user_transaction.id))%>
+                    <span class="is-size-3">
+                      <%= user_transaction.name.capitalize %>
+                    </span>
+                  </span>
+                </div>
+                <div class="column is-4 has-text-centered">
+                  <span class="is-size-4">$<%= user_transaction.amount %></span>
+                </div>
+
+                <div class="column is-4 has-text-right">
+                  <span class="is-size-5"><i><%= user_transaction.created_at.strftime("%d %b %Y") %></i></span>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to 'Add New Transaction', new_user_transaction_path, class:"button is-success mt-3 is-fullwidth" %>
+  </div>
+</div>
