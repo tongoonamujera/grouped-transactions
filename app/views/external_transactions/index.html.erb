@@ -1,22 +1,23 @@
 
+
 <div class="columns is-centered">
   <div class="column is-6-desktop is-12-mobile is-12-mobile">
     <div class="card card-content">
       <div class="content">
         <p id="notice"><%= notice %></p>
 
-        <h1 class="has-text-centered">All Transactions</h1>
+        <h1 class="has-text-centered">External Transactions</h1>
 
         <div class="columns is-centered">
           <div class="column is-4">
             <u><strong>Total Amount</strong></u>
           </div>
           <div class="column is-4 has-text-right">
-            $<%= user_total_transactions %>
+            $<%= user_total_external_transactions %>
           </div>
         </div>
 
-        <% @user_transactions.each do |user_transaction| %>
+        <% @external_transactions.each do |user_transaction| %>
           <div class="box">
             <%= link_to user_transaction do %>
               <div class="columns has-text-dark">

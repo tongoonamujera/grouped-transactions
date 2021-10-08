@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :external_transactions
   resources :group_transactions do
     match '/new', to: 'group_transactions#create', via: :post, on: :collection
   end

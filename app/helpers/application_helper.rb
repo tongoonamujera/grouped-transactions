@@ -13,6 +13,10 @@ module ApplicationHelper
     content_tag(:i, "", class:"far fa-user-circle fa-3x")
   end
 
+  def login_icon
+    content_tag(:i, "", class:"fas fa-sign-in-alt fa-2x")
+  end
+
   def join_group(group, transaction)
     (link_to "add to group", new_group_transaction_path(@group_transaction, group_id: group.id, user_transaction_id:transaction.id), class:"button is-success",method: :post).html_safe
   end
@@ -34,5 +38,12 @@ module ApplicationHelper
   def user_total_transactions
     a = current_user.user_transactions.pluck(:amount).inject(:+)
     a.nil? ? a = 0 : a
+  end
+
+  def user_total_external_transactions
+    a = current_user.user_transactions.pluck(:id)
+    b = GroupTransaction.where("user_transaction_id IN (?)", a).pluck(:user_transaction_id).uniq!
+    c = current_user.user_transactions.where.not("id IN (?)", b).pluck(:amount).inject(:+)
+    c.nil? ? c = 0 : c
   end
 end
