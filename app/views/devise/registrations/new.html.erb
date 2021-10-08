@@ -1,30 +1,41 @@
-<h2>Sign up</h2>
+<div class="columns is-centered">
+  <div class="column is-4">
+    <div class="card">
+      <div class="has-text-centered has-background-primary py-5 mx-3">
+        <h1 class="is-size-1">Create Account</h1>
+        <p class="is-size-2"><i>Group Our <br> Transactions</i></p>
+      </div>
+      <div class="card-content">
+        <div class="content">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email, class:'label' %>
-    <%= f.email_field :email, class:"input", autofocus: true, autocomplete: "email" %>
+            <div class="field">
+              <%= f.email_field :email, class:"input has-text-centered", autofocus: true, autocomplete: "email", placeholder: "Enter You Email" %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password, value: user_login_password, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= f.password_field :password_confirmation, value: user_login_password, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= f.text_field :username, class:'input has-text-centered', placeholder: "Enter You Username" %>
+            </div>
+
+
+            <div class="actions">
+              <%= f.submit "Sign Up", class:"button is-primary is-fullwidth" %>
+            </div>
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.password_field :password, value: user_login_password, type: :hidden %>
-  </div>
-
-  <div class="field">
-    <%= f.password_field :password_confirmation, value: user_login_password, type: :hidden %>
-  </div>
-
-  <div class="field">
-    <%= f.label :username, class:"label"%>
-    <%= f.text_field :username, class:'input' %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "Sign up", class:"button is-success" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
