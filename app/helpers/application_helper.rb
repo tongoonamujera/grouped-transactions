@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def first_transaction_icon(id)
-    UserTransaction.find(id).groups.pluck(:icon).last
+    UserTransaction.find(id).groups.order(created_at: :desc).pluck(:icon).last
   end
 
   def transaction_already_in_group(group, transaction)
