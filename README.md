@@ -1,67 +1,78 @@
-<!-- # README
+# GROUP OUR TRANSACTIONS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> In this project, I will build an application that allows users to create their own transaction lists. In this application, users can also create groups with which they can add their transactions. See live demo........
 
-Things you may want to cover:
+## Live Demo Link
 
-* Ruby version
+[groupedtransactions](https://groupedtransactions.herokuapp.com)
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- Bulma
+- Fontawesome icons
+- Postgresql
 
-* Database creation
+## Getting Started
 
-* Database initialization
+Clone
 
-* How to run the test suite
+```git
+git clone https://github.com/tongoonamujera/grouped-transactions.git
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running, follow these simple example steps.
 
-* Deployment instructions
+1. Open a terminal window and enter `git clone https://github.com/tongoonamujera/grouped-transactions.git`
+2. Make your new cloned directory your active directory
+3. Currently, you are in the "development branch."
+4. Change your current branch to Feature branch `git checkout feature`
+5. Run `bundle` to install gems to your project
 
-* ... -->
+### USAGE
 
-<!-- 1. The user logs in to the app, only by typing the username (a proper authenticated login is **not** a requirement).
-2. The user is presented with a profile page (see the *User profile page* screenshot above) that includes links to:
-    1. "All my transactions".
-    2. "All my external transactions".
-    3. "All groups".
-3. When user opens "All my transactions" page (see the *Transactions list page* screenshot above):
-    1. Total amount is displayed at the top (in place of "Gift credit" at the design).
-    2. A list of all transactions created by logged-in user is displayed (sorted by most recent).
-    3. Each transaction displays its name, amount and date, and an icon of the first group it has been assigned to.
-    4. An action button "Add new" is displayed.
-4. When user opens "All my external transactions" page (see the *Transactions list page* screenshot above):
-    1. A list of all transactions that are created by a logged-in user but **not assigned to any group** (sorted by most recent).
-    2. The design of the page is similar to the "All my transactions".
-5. When user opens "All groups" page:
-    1. A list of all groups is displayed (example ideas for names: "Kitchen renovation", "Books, music & culture", "Car maintenance") in alphabetical order.
-    2. Each group displays its icon, name and creation date.
-    3. Each group is clickable and opens "Group transactions" page.
-    4. An action button "Create new" is displayed.
-    5. The design of the page is similar to the "User profile page"
-6. When user opens the "Group transactions" page:
-    1. A list of all transactions that belong to that group is displayed.
-    2. The design of the page is similar to the "All my transactions". Besides the information that appears in All my transactions page, each transaction displays the **name of the author** of the transaction.
-7. When user opens "Create new group" or "Add new transaction" page:
-    1. A form with all necessary fields is displayed.
-    2. It's not in the given design, but you should make an effort to follow the same style of the other pages.
-8. At the end extend your MVP app with one simple feature of your choice.
+- In this application users can create:
 
-You should follow the guidelines of the given design, including:
+  - Thier own transactions
 
-- colors (they are not explicit, you should pick them from design)
-- typographies: font face, size and weight (use similar ones to the design)
-- layout: composition and space between elements
+  - Their own groups
 
-While developing the project, you should follow the best practices that you already learned in the previous projects, like setting-up a code linter, using gitflow, testing business logic, writing good commit messages and an informative README.
+  - Assign transactions to groups
 
-You can access all the design info (color, typography, layouts) in this link:
+- User will be able to see a list of created transactions and their total
 
-[https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
+- User will be able to see transation that belongs to a group and total amount of transactions pertaining to that group
 
-Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- User will be able to see all his external transactions (ie. transactions that are not assigned to any group) and their total
 
-The [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/) requires that you give appropriate credit to the author. Therefore, you must do it in the README of your project. -->
+### Prerequisites
+
+- Ruby installed locally(Ruby-3.0.0)
+- Rails installed locally(Rails 6.0.4 used)
+- Have knowledge with bulma
+- A text editor
+- Postgresql installed
+
+## Authors
+
+👤 **Tongoona Mujera**
+
+- Github: [@tongoonamujera](https://github.com/tongoonamujera)
+- Twitter: [@tongomujera](https://twitter.com/tongomujera)
+- Linkedin: [tongoona-mujera](https://www.linkedin.com/in/tongoona-mujera-125604162/)
+- Email:  tongoonamujera@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project.!
+
+## 📝 License
+
+This project is [MIT](LICENCE) licensed.
