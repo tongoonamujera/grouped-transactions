@@ -32,6 +32,7 @@ body {
 }
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';
 @import '@fortawesome/fontawesome-free/scss/regular';
@@ -53,10 +54,9 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   display: flex;
   flex-direction: column;
   font-size: x-large;
-
   background-color: rgb(131, 231, 173);
-
   align-items: center;
+
   .user-profile {
     margin-top: 5%;
     display: flex;
@@ -110,4 +110,3 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .navbar-brand .checkbox:checked ~ .menul-bars {
   visibility: visible;
 }
-
