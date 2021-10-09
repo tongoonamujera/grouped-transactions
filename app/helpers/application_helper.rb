@@ -1,4 +1,5 @@
 module ApplicationHelper
+#rubocop:disable all
   def user_login_password
     a = '2230959583'
 
