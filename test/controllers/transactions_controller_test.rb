@@ -1,5 +1,5 @@
 require 'test_helper'
-
+#rubocop:disable all
 class TransactionsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @transaction = transactions(:one)

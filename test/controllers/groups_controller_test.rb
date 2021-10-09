@@ -1,5 +1,5 @@
 require 'test_helper'
-
+#rubocop:disable all
 class GroupsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @group = groups(:one)
