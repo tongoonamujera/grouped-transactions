@@ -8,7 +8,7 @@ class GroupTransactionsController < ApplicationController
 
   # GET /group_transactions/1 or /group_transactions/1.json
   def show
-    #show
+    # show
   end
 
   # GET /group_transactions/new

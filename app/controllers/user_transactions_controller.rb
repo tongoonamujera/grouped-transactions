@@ -19,7 +19,7 @@ class UserTransactionsController < ApplicationController
 
   # GET /user_transactions/1/edit
   def edit
-  # edit
+    # edit
   end
 
   # POST /user_transactions or /user_transactions.json
