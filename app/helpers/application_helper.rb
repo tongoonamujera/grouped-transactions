@@ -6,15 +6,15 @@ module ApplicationHelper
   end
 
   def icon(icon_text)
-    content_tag(:i, ', class:'#{icon_text}')
+    content_tag(:i, '', class:'#{icon_text}')
   end
 
   def profile_icon
-    content_tag(:i, ', class:'far fa-user-circle fa-3x')
+    content_tag(:i, '', class:'far fa-user-circle fa-3x')
   end
 
   def login_icon
-    content_tag(:i, ', class:'fas fa-sign-in-alt fa-2x')
+    content_tag(:i, '', class:'fas fa-sign-in-alt fa-2x')
   end
 
   def join_group(group, transaction)

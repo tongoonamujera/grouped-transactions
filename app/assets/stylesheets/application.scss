@@ -40,20 +40,6 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 
 /* ########******** Hamburger styles ********######## */
 
-.navbar-brand .checkbox:checked ~ .profile-container {
-  display: block;
-}
-
-.navbar-brand .checkbox:checked ~ .menu-bars {
-  transform: rotate(90 deg) ease;
-  visibility: hidden;
-}
-
-.navbar-brand .checkbox:checked ~ .menul-bars {
-  transform: rotate(90 deg) ease;
-  visibility: visible;
-}
-
 .navbar-brand .profile-container {
   display: none;
 }
@@ -111,5 +97,17 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
   cursor: pointer;
   opacity: 0;
   z-index: 2;
+}
+
+.navbar-brand .checkbox:checked ~ .profile-container {
+  display: block;
+}
+
+.navbar-brand .checkbox:checked ~ .menu-bars {
+  visibility: hidden;
+}
+
+.navbar-brand .checkbox:checked ~ .menul-bars {
+  visibility: visible;
 }
 
