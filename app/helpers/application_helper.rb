@@ -22,7 +22,11 @@ module ApplicationHelper
   end
 
   def first_transaction_icon(id)
-    UserTransaction.find(id).groups.order(created_at: :desc).pluck(:icon).last
+    a = GroupTransaction.where("user_transaction_id =?", id).order(created_at: :asc)[0]
+    return nil if a.nil?
+
+    b = Group.where("id =?", a.group_id).pluck(:icon)
+    b[0]
   end
 
   def transaction_already_in_group(group, transaction)
