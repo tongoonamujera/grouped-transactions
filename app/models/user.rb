@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :user_transactions
   has_many :groups
+
+  validates_format_of :username, with: /^[-a-z]+$/
+  validates :username,
+            presence: true,
+            uniqueness: true,
+            length: { minimum: 6, maximum: 20 }
 end
