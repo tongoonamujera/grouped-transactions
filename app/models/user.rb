@@ -6,7 +6,6 @@ class User < ApplicationRecord
   has_many :user_transactions
   has_many :groups
 
-  validates_format_of :username, with: /^[-a-z]+$/
   validates :username,
             presence: true,
             uniqueness: true,
