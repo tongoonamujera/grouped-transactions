@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def icon(icon_text)
-    content_tag(:i, '', class:'#{icon_text}')
+    content_tag(:i, '', class:"#{icon_text}")
   end
 
   def profile_icon
