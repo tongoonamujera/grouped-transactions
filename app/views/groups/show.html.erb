@@ -4,7 +4,7 @@
       <div class="card-content">
         <div class="content">
           <p id="notice"><%= notice %></p>
-          <div class="columns is-centered">
+          <div class="columns is-centered is-flex-mobile">
             <div class="column is-6 has-text-centered">
               <span>
                 <%= icon(@group.icon) %>
@@ -15,7 +15,7 @@
             </div>
           </div>
 
-          <div class="columns is-centered">
+          <div class="columns is-centered is-flex-mobile">
             <div class="column is-6">
               <span>
                 <strong><u>Group Transactions Total Amount:</u></strong>
@@ -32,7 +32,7 @@
             <h1 class='has-text-centered'>Group transactions</h1>
             <% @group.user_transactions.each do |transaction| %>
               <div class="box">
-                <div class="columns">
+                <div class="columns is-flex-mobile">
                   <div class="column is-4">
                     <%= transaction.name %>
                   </div>
@@ -50,7 +50,7 @@
 
         </div>
       </div>
-      <footer class="card-footer">
+      <footer class="card-footer is-flex-mobile">
         <div class="column is-6 has-text-centered">
           <%= link_to 'Edit', edit_group_path(@group), class:"card-footer-items button is-success is-fullwidth" %>
         </div>
