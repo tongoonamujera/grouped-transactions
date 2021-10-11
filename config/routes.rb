@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :external_transactions
   resources :group_transactions do
     match '/new', to: 'group_transactions#create', via: :post, on: :collection
