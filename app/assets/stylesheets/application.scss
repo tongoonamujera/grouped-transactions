@@ -110,3 +110,16 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 .navbar-brand .checkbox:checked ~ .menul-bars {
   visibility: visible;
 }
+
+/* styles for home page */
+
+.links-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 35%;
+
+  .last-elem {
+    margin-left: 15%;
+  }
+}
