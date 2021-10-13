@@ -1,0 +1,22 @@
+<div class="columns is-centered has-background-primary">
+  <div class="column is-6-desktop is-12-mobile">
+    <div class="user-profile has-text-white has-text-centered">
+      <div><%= profile_icon %></div>
+      <div><%= current_user.username.capitalize %></div>
+    </div>
+    <div class="links-containers has-text-centered" id="myLinks">
+      <%= link_to user_transactions_path, class:"has-text-white" do %>
+        <span><i class="fas fa-money-bill-alt fa-2x"></i><span class="is-size-3"> All My Transactions</span></span>
+      <% end %>
+      <%= link_to external_transactions_path, class:"has-text-white"  do %>
+        <span><i class="fas fa-money-bill-alt fa-2x"></i><span class="is-size-3"> All External Transactions</span></span>
+      <% end %>
+      <%= link_to  groups_path, class:"has-text-white"  do %>
+        <span><i class="fas fa-users-cog fa-2x"></i><span class="is-size-3"> All Groups</span></span>
+      <% end %>
+      <%= link_to  destroy_user_session_path, method: :delete, class:"has-text-white last-elem my-5 py-5 has-text-centered"  do %>
+        <span><i class="fas fa-sign-out-alt"></i><span class="is-size-4">Sign Out</span></span>
+      <% end %>
+    </div>
+  </div>
+</div>

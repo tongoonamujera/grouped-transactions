@@ -5,7 +5,7 @@
     <div class="card">
       <div class="card-content">
         <div class="content">
-          <div class="columns">
+          <div class="columns is-flex-mobile">
             <div class="column">
               <p>
                 <strong>Name:</strong>
@@ -23,7 +23,7 @@
           <% @group_transactions.each do |group|%>
             <% unless transaction_already_in_group(group, @user_transaction) %>
               <div class="box">
-                <div class="columns is-centered">
+                <div class="columns is-centered is-flex-mobile">
                   <div class="column is-4"><%=icon(group.icon) %> </div>
                   <div class="column is-4"><%= group.name %></div>
                   <div class="column is-4 has-text-right">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-    <div class="columns mt-3">
+    <div class="columns mt-3 is-flex-mobile">
       <div class="column has-text-centered">
         <%= link_to 'Edit', edit_user_transaction_path(@user_transaction), class:"button is-success" %>
       </div>
