@@ -1,4 +1,5 @@
 require 'rails_helper'
+#rubocop:disable all
 
 RSpec.describe UserTransaction, type: :model do
   let(:first_user) { User.create(username: 'tongoonam', email: 'tongoona@rspec.com', password: 'mujeratongo') }

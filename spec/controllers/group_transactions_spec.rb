@@ -1,4 +1,5 @@
 require 'rails_helper'
+#rubocop:disable all
 
 RSpec.describe 'GroupTransactions controller', type: :model do
   let(:user1) { User.create(username: 'Tongoona', email: 'tongoona@gmail.com', password: 'aaaaaaaa') }
