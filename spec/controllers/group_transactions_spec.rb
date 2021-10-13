@@ -4,7 +4,8 @@ RSpec.describe 'GroupTransactions controller', type: :model do
   let(:user1) { User.create(username: 'Tongoona', email: 'tongoona@gmail.com', password: 'aaaaaaaa') }
   let(:first_transaction) { UserTransaction.create(name: 'tonaaaa', amount: 20, user_id: user1.id) }
   let(:first_group) { Group.create(name: 'first group', user_id: user1.id) }
-  let(:group_transaction_first) { GroupTransaction.create(group_id: first_group.id, user_transaction_id: first_transaction.id) }
+  let(:group_transaction_first) { GroupTransaction.create(group_id: first_group.id,
+                                                          user_transaction_id: first_transaction.id) }
 
   describe 'GET index' do
     it 'should show group transaction with his id' do

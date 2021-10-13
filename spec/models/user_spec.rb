@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:first_user) { User.create(username: 'tongoonam', email:'tongoona@rspec.com', password: 'mujeratongo') }
+  let(:first_user) { User.create(username: 'tongoonam', email: 'tongoona@rspec.com', password: 'mujeratongo') }
   let(:second_user) { User.create(username: 'ton', email: 'ton@rspec.com', password: 'mujeratongo') }
   let(:third_user) { User.create(username: '', email: 'tong@rspec.com', password: 'mujeratongo') }
-  let(:fourth_user) { User.create(username: 'tongooonamujeeeeraaaa', email: 'tongooonamujeeeeraaa@rspec.com', password: 'mujeratongo') }
+  let(:fourth_user) { User.create(username: 'tongooonamujeeeeraaaa',
+                                  email: 'tongooonamujeeeeraaa@rspec.com', password: 'mujeratongo') }
   let(:user_transactions) { User.reflect_on_association(:user_transactions).macro }
   let(:groups) { User.reflect_on_association(:groups).macro }
 
