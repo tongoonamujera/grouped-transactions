@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Groups controller', type: :model do
   let(:user1) { User.create(username: 'Tongoona', email: 'tongoona@gmail.com', password: 'aaaaaaaa') }
-  let(:first_group) { Group.create(name: 'first group', user_id: user1.id ) }
-  let(:second_group) { Group.create(name: 'second group', user_id: user1.id ) }
+  let(:first_group) { Group.create(name: 'first group', user_id: user1.id) }
+  let(:second_group) { Group.create(name: 'second group', user_id: user1.id) }
 
   describe 'GET index' do
     it 'should show group with hts id' do

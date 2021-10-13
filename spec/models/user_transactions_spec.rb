@@ -3,11 +3,11 @@ require 'rails_helper'
 RSpec.describe UserTransaction, type: :model do
   let(:first_user) { User.create(username: 'tongoonam', email:'tongoona@rspec.com', password: 'mujeratongo') }
   let(:first_transaction) { UserTransaction.create(name: 'tonaaaa', amount: 20, user_id: first_user.id) }
-  let(:second_transaction) { UserTransaction.create(name: '', amount: 30, user_id: first_user.id ) }
-  let(:third_transaction) { UserTransaction.create(name: 'ton', amount: 30, user_id: first_user.id ) }
-  let(:fourth_transaction) { UserTransaction.create(name: 'tonggggggggonnjasdhjksdfghjdfghjdfghdfgh', amount: 30, user_id: first_user.id ) }
-  let(:fifth_transaction) { UserTransaction.create(name: 'tongoona', amount: '', user_id: first_user.id ) }
-  let(:last_transaction) { UserTransaction.create(name: 'tongoona', amount: 30, user_id: '' ) }
+  let(:second_transaction) { UserTransaction.create(name: '', amount: 30, user_id: first_user.id) }
+  let(:third_transaction) { UserTransaction.create(name: 'ton', amount: 30, user_id: first_user.id) }
+  let(:fourth_transaction) { UserTransaction.create(name: 'tonggggggggonnjasdhjksdfghjdfghjdfghdfgh', amount: 30, user_id: first_user.id) }
+  let(:fifth_transaction) { UserTransaction.create(name: 'tongoona', amount: '', user_id: first_user.id) }
+  let(:last_transaction) { UserTransaction.create(name: 'tongoona', amount: 30, user_id: '') }
   let(:group_transactions) { UserTransaction.reflect_on_association(:group_transactions).macro }
 
   it 'checks validity of a transaction' do
