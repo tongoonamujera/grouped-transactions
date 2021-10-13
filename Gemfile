@@ -12,6 +12,7 @@ gem 'pg', '~> 1.2', '>= 1.2.3'
 gem 'devise', '~> 4.8'
 gem 'hirb', '~> 0.7.3'
 gem 'bulma-rails', '~> 0.9.1'
+gem 'rexml'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
