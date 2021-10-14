@@ -53,6 +53,7 @@ To get a local copy up and running, follow these simple example steps.
 - Have knowledge with bulma
 - A text editor
 - Postgresql installed
+- all
 
 ## Authors
 
