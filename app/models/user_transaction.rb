@@ -10,7 +10,7 @@ class UserTransaction < ApplicationRecord
             length: { minimum: 6, maximum: 25 }
 #rubocop:disable all
   def update_payment
-    self.update_attributes(is_paid: true)
+    self.update_column(is_paid: true)
   end
 
   def self.archieved
@@ -22,6 +22,6 @@ class UserTransaction < ApplicationRecord
   end
 
   def archieve_payments
-    self.update_attributes(is_paid: false)
+    self.update_column(is_paid: false)
   end
 end
