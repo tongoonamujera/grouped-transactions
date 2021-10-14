@@ -53,7 +53,6 @@ To get a local copy up and running, follow these simple example steps.
 - Have knowledge with bulma
 - A text editor
 - Postgresql installed
-- all
 
 ## Authors
 
@@ -77,3 +76,9 @@ Give a ⭐️ if you like this project.!
 ## 📝 License
 
 This project is [MIT](LICENCE) licensed.
+
+
+## Acknowledgments
+
+* [Design idea by Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+* [Creative Commons ](https://creativecommons.org/licenses/by-nc/4.0/)
