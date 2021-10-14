@@ -11,7 +11,7 @@
             <u><strong>Total Amount</strong></u>
           </div>
           <div class="column is-4 has-text-right">
-            $<%= user_total_transactions %>
+            $<%= archieved_total_transactions %>
           </div>
         </div>
 
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="column is-4 has-text-right">
-                      <span class="is-size-6"><i><%= user_transaction.created_at.strftime("%d %b %Y") %></i></span>
+                      <span class="is-size-6"><i><%= user_transaction.updated_at.strftime("%d %b %Y") %></i></span>
                     </div>
                   </div>
                 <% end %>
