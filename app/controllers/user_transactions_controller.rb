@@ -59,6 +59,13 @@ class UserTransactionsController < ApplicationController
     end
   end
 
+  def update_payments
+    @updated_payment = UserTransaction.find(params[:id])
+    @updated_payment.update_payment
+
+    redirect_to user_transactions_url
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -68,6 +75,6 @@ class UserTransactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_transaction_params
-    params.require(:user_transaction).permit(:name, :amount, :user_id)
+    params.require(:user_transaction).permit(:name, :amount, :user_id, :is_paid)
   end
 end

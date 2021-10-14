@@ -1,6 +1,6 @@
 
 <div class="columns is-centered">
-  <div class="column is-6-desktop is-12-mobile is-12-mobile">
+  <div class="column is-7-desktop is-12-mobile is-12-mobile">
     <div class="card card-content">
       <div class="content">
         <p id="notice"><%= notice %></p>
@@ -18,25 +18,34 @@
 
         <% @user_transactions.each do |user_transaction| %>
           <div class="box">
-            <%= link_to user_transaction do %>
-              <div class="columns has-text-dark is-flex-mobile">
-                <div class="column is-4">
-                  <span>
-                    <%= icon(first_transaction_icon(user_transaction.id))%>
-                    <span class="is-size-3">
-                      <%= user_transaction.name.capitalize %>
-                    </span>
-                  </span>
-                </div>
-                <div class="column is-4 has-text-centered">
-                  <span class="is-size-4">$<%= user_transaction.amount %></span>
-                </div>
+            <div class="columns">
+              <div class="column is-9">
+                <%= link_to user_transaction do %>
+                  <div class="columns has-text-dark is-flex-mobile">
+                    <div class="column is-4">
+                      <span>
+                        <%= icon(first_transaction_icon(user_transaction.id))%>
+                        <span class="is-size-4">
+                          <%= user_transaction.name.capitalize %>
+                        </span>
+                      </span>
+                    </div>
+                    <div class="column is-2 has-text-centered">
+                      <span class="is-size-5">$<%= user_transaction.amount %></span>
+                    </div>
 
-                <div class="column is-4 has-text-right">
-                  <span class="is-size-5"><i><%= user_transaction.created_at.strftime("%d %b %Y") %></i></span>
-                </div>
+                    <div class="column is-4 has-text-right">
+                      <span class="is-size-6"><i><%= user_transaction.created_at.strftime("%d %b %Y") %></i></span>
+                    </div>
+                  </div>
+                <% end %>
               </div>
-            <% end %>
+              <div class="column is-3">
+                <%= form_for user_transaction, :url => [:update_payments, user_transaction], html: { method: :put } do |f| %>
+                  <%= f.submit 'Archieve Payment', class:'button is-primary' %>
+                <% end %>
+              </div>
+            </div>
           </div>
         <% end %>
       </div>

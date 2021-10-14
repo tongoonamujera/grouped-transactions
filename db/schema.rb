@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_10_14_101053) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "is_paid"
+    t.boolean "is_paid", default: false
     t.index ["user_id"], name: "index_user_transactions_on_user_id"
   end
 
