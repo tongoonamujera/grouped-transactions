@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   end
   resources :user_transactions do
     put :update_payments, on: :member
+    put :archieve_payments, on: :member
+    get :archieved_transactions, on: :collection
   end
   resources :groups
   devise_for :users

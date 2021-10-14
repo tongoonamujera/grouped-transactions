@@ -3,7 +3,11 @@ class UserTransactionsController < ApplicationController
 
   # GET /user_transactions or /user_transactions.json
   def index
-    @user_transactions = current_user.user_transactions.order(created_at: :desc)
+    @user_transactions = current_user.user_transactions.archieved.order(created_at: :desc)
+  end
+
+  def archieved_transactions
+    @user_transactions = current_user.user_transactions.not_archieved.order(created_at: :desc)
   end
 
   # GET /user_transactions/1 or /user_transactions/1.json
@@ -62,6 +66,13 @@ class UserTransactionsController < ApplicationController
   def update_payments
     @updated_payment = UserTransaction.find(params[:id])
     @updated_payment.update_payment
+
+    redirect_to user_transactions_url
+  end
+
+  def archieve_payments
+    @updated_payment = UserTransaction.find(params[:id])
+    @updated_payment.archieve_payments
 
     redirect_to user_transactions_url
   end

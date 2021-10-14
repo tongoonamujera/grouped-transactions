@@ -12,4 +12,16 @@ class UserTransaction < ApplicationRecord
   def update_payment
     self.update_attributes(is_paid: true)
   end
+
+  def self.archieved
+    where(is_paid: false)
+  end
+
+  def self.not_archieved
+    where(is_paid: true)
+  end
+
+  def archieve_payments
+    self.update_attributes(is_paid: false)
+  end
 end

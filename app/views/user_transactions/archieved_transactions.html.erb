@@ -1,11 +1,10 @@
-
 <div class="columns is-centered">
   <div class="column is-7-desktop is-12-mobile is-12-mobile">
     <div class="card card-content">
       <div class="content">
         <p id="notice"><%= notice %></p>
 
-        <h1 class="has-text-centered">All Transactions</h1>
+        <h1 class="has-text-centered">Archieved Transactions</h1>
 
         <div class="columns is-centered is-flex-mobile">
           <div class="column is-4">
@@ -41,8 +40,8 @@
                 <% end %>
               </div>
               <div class="column is-3">
-                <%= form_for user_transaction, :url => [:update_payments, user_transaction], html: { method: :put } do |f| %>
-                  <%= f.submit 'Archieve Payment', class:'button is-danger' %>
+                <%= form_for user_transaction, :url => [:archieve_payments, user_transaction], html: { method: :put } do |f| %>
+                  <%= f.submit 'Reverse Payment', class:'button is-primary px-0' %>
                 <% end %>
               </div>
             </div>
@@ -50,7 +49,6 @@
         <% end %>
       </div>
     </div>
-    <%= link_to 'Add New Transaction', new_user_transaction_path, class:"button is-success mt-3 is-fullwidth" %>
-    <%= link_to 'Click to see Archieved Payments', archieved_transactions_user_transactions_path, class:"button is-success mt-3 is-fullwidth" %>
+    <%= link_to 'Back', user_transactions_path, class:"button is-dark mt-3" %>
   </div>
 </div>
