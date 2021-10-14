@@ -7,7 +7,7 @@ class UserTransactionsController < ApplicationController
   end
 
   def archieved_transactions
-    @user_transactions = current_user.user_transactions.not_archieved.order(created_at: :desc)
+    @user_transactions = current_user.user_transactions.not_archieved.order(updated_at: :desc)
   end
 
   # GET /user_transactions/1 or /user_transactions/1.json
@@ -74,7 +74,7 @@ class UserTransactionsController < ApplicationController
     @updated_payment = UserTransaction.find(params[:id])
     @updated_payment.archieve_payments
 
-    redirect_to user_transactions_url
+    redirect_to archieved_transactions_user_transactions_path
   end
 
   private
