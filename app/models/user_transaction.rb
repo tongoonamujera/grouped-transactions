@@ -8,7 +8,7 @@ class UserTransaction < ApplicationRecord
   validates :name,
             presence: true,
             length: { minimum: 6, maximum: 25 }
-
+#rubocop:disable all
   def update_payment
     self.update_attributes(is_paid: true)
   end
