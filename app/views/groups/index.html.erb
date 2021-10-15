@@ -8,11 +8,14 @@
               <div class="box">
                 <%= link_to group do %>
                   <div class="columns is-flex-mobile">
-                    <div class="column is-6 has-text-dark">
+                    <div class="column is-3 has-text-dark">
                       <%= icon(group.icon)%>
                     </div>
-                    <div class="column is-6 has-text-dark has-text-centered">
+                    <div class="column is-5 has-text-dark has-text-centered">
                       <%= group.name %>
+                    </div>
+                    <div class="column is-4 has-text-dark has-text-centered">
+                      <i><%= group.created_at.strftime("%d %b %y") %></i>
                     </div>
                   </div>
                 <% end %>
