@@ -1,8 +1,8 @@
 class UserTransaction < ApplicationRecord
   belongs_to :user
 
-  has_many :group_transactions, dependent: :nullify
-  has_many :groups, through: :group_transactions, dependent: :nullify
+  has_many :group_transactions, dependent: :destroy
+  has_many :groups, through: :group_transactions, dependent: :destroy
 
   validates :amount, numericality: true
   validates :name,
