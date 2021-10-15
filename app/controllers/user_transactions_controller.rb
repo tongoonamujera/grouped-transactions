@@ -71,8 +71,8 @@ class UserTransactionsController < ApplicationController
   end
 
   def archieve_payments
-    @updated_payment = UserTransaction.find(params[:id])
-    @updated_payment.archieve_payments
+    @updated_payments = UserTransaction.find(params[:id])
+    @updated_payments.archieve_payments
 
     redirect_to archieved_transactions_user_transactions_path
   end
