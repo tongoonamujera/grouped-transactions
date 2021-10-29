@@ -3,7 +3,11 @@ class UserTransactionsController < ApplicationController
 
   # GET /user_transactions or /user_transactions.json
   def index
-    @user_transactions = current_user.user_transactions.order(created_at: :desc)
+    @user_transactions = current_user.user_transactions.archieved.order(created_at: :desc)
+  end
+
+  def archieved_transactions
+    @user_transactions = current_user.user_transactions.not_archieved.order(updated_at: :desc)
   end
 
   # GET /user_transactions/1 or /user_transactions/1.json
@@ -59,6 +63,20 @@ class UserTransactionsController < ApplicationController
     end
   end
 
+  def update_payments
+    @updated_payment = UserTransaction.find(params[:id])
+    @updated_payment.update_payment
+
+    redirect_to user_transactions_url
+  end
+
+  def archieve_payments
+    @updated_payments = UserTransaction.find(params[:id])
+    @updated_payments.archieve_payments
+
+    redirect_to archieved_transactions_user_transactions_path
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -68,6 +86,6 @@ class UserTransactionsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_transaction_params
-    params.require(:user_transaction).permit(:name, :amount, :user_id)
+    params.require(:user_transaction).permit(:name, :amount, :user_id, :is_paid)
   end
 end

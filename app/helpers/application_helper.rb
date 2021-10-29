@@ -36,12 +36,17 @@ module ApplicationHelper
   end
 
   def group_transactions_total(group)
-    a = Group.find(group.id).user_transactions.pluck(:amount).inject(:+)
+    a = Group.find(group.id).user_transactions.archieved.pluck(:amount).inject(:+)
+    a.nil? ? a = 0 : a
+  end
+
+  def archieved_total_transactions
+    a = current_user.user_transactions.not_archieved.pluck(:amount).inject(:+)
     a.nil? ? a = 0 : a
   end
 
   def user_total_transactions
-    a = current_user.user_transactions.pluck(:amount).inject(:+)
+    a = current_user.user_transactions.archieved.pluck(:amount).inject(:+)
     a.nil? ? a = 0 : a
   end
 

@@ -2,17 +2,23 @@
 
 > In this project, I will build an application that allows users to create their own transaction lists. In this application, users can also create groups with which they can add their transactions. See live demo........
 
+## Explanation video
+
+[Video](https://youtu.be/LEFi9WHfE_M)
+
 ## Live Demo Link
 
 [groupedtransactions](https://groupedtransactions.herokuapp.com)
 
 ## Built With
 
-- Ruby
-- Ruby on Rails
+- Ruby(3.0.0p0)
+- Ruby on Rails(6.0.4.1)
 - Bulma
 - Fontawesome icons
 - Postgresql
+- hmtl5
+- sass
 
 ## Getting Started
 
@@ -42,15 +48,31 @@ To get a local copy up and running, follow these simple example steps.
 
 - User will be able to see a list of created transactions and their total
 
+- User will be able to see a list of all groups sorted in alphabetical order
+
 - User will be able to see transation that belongs to a group and total amount of transactions pertaining to that group
 
 - User will be able to see all his external transactions (ie. transactions that are not assigned to any group) and their total
+
+- ## Extra feature Added
+
+  - I Add an extra feature that allows users to archieve thier own payments or transactions
+
+    - This feature barely allow a user to archieve his or her own transaction and hence there will de reduction in his total amount.
+
+    - Archieved transaction won't appear to groups.
+
+    - Archieved transactions show thier total amount.
+
+    - Archieved transaction can also be reversed if only user thinks about reversing them.
+
+    - User can only see his list of archieved transactions
 
 ### Prerequisites
 
 - Ruby installed locally(Ruby-3.0.0)
 - Rails installed locally(Rails 6.0.4 used)
-- Have knowledge with bulma
+- Have basic knowledge with bulma
 - A text editor
 - Postgresql installed
 
@@ -76,3 +98,8 @@ Give a ⭐️ if you like this project.!
 ## 📝 License
 
 This project is [MIT](LICENCE) licensed.
+
+## Acknowledgments
+
+- [Design idea by Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+- [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/)
